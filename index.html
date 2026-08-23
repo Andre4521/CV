@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>André Nascimento · Engenheiro de Minas</title>
+    <meta
+      name="description"
+      content="Currículo de André Nascimento — Engenheiro de Minas e Gerente de Operações na FERBASA, com atuação em lavra, beneficiamento e manutenção."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme =
+            saved ||
+            (window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="progress" id="progress"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark">AN</span>
+        <span class="brand-text">andre-nascimento</span>
+      </a>
+      <div class="nav-right">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Alternar modo claro e escuro"
+          title="Alternar tema"
+        >
+          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks">
+          <a href="#inicio">Início</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#formacao">Formação</a>
+          <a href="#idioma">Idiomas</a>
+          <a href="#projetos">Projetos</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <canvas id="neuralCanvas" aria-hidden="true"></canvas>
+        <div class="hero-inner">
+          <div class="photo-wrap reveal">
+            <div class="photo-ring"></div>
+            <img
+              src="assets/foto.png"
+              alt="Foto de André Nascimento"
+              class="photo"
+            />
+            <span class="photo-badge">
+              <i class="fa-solid fa-gem"></i>
+              Minas
+            </span>
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow reveal">
+              <i class="fa-solid fa-location-dot"></i>
+              Campo Formoso, Bahia · Brasil
+            </p>
+            <h1 class="reveal">André Nascimento</h1>
+            <p class="role reveal">
+              Engenheiro de Minas · Gerente de Operações · Eng. de Segurança
+            </p>
+            <p class="catchphrase" id="catchphrase" aria-live="polite"></p>
+            <p class="lead reveal">
+              Especialista em operações de mineração e beneficiamento, com mais
+              de 13 anos na FERBASA. Como Gerente de Operações, respondo pela
+              lavra da mina a céu aberto, beneficiamento e manutenção, unindo
+              engenharia, segurança e liderança de equipes.
+            </p>
+            <ul class="contact-row reveal">
+              <li>
+                <a href="mailto:andrefigueiredo12@hotmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  andrefigueiredo12@hotmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+5574991196462">
+                  <i class="fa-solid fa-phone"></i>
+                  (74) 99119-6462
+                </a>
+              </li>
+            </ul>
+            <div class="hero-actions reveal">
+              <a class="btn btn-primary" href="#experiencia">
+                Ver trajetória
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+              <a
+                class="btn btn-ghost"
+                href="https://www.linkedin.com/in/andre-nascimento"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+              </a>
+            </div>
+            <ul class="tech-pills reveal">
+              <li><i class="fa-solid fa-mountain"></i> Lavra</li>
+              <li><i class="fa-solid fa-industry"></i> Beneficiamento</li>
+              <li><i class="fa-solid fa-wrench"></i> Manutenção</li>
+              <li><i class="fa-solid fa-shield-halved"></i> Segurança</li>
+              <li><i class="fa-solid fa-users"></i> Liderança</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experiencia">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-index">01</span>
+            <div>
+              <p class="section-kicker">
+                <i class="fa-solid fa-briefcase"></i> Carreira
+              </p>
+              <h2>Experiência profissional</h2>
+            </div>
+          </header>
+
+          <ol class="timeline">
+            <li class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <article class="card">
+                <div class="card-top">
+                  <span class="company">
+                    <i class="fa-solid fa-mountain"></i>
+                    FERBASA
+                  </span>
+                  <span class="period">Jul 2026 — Atual</span>
+                </div>
+                <h3>Gerente de Operações</h3>
+                <p>
+                  Responsável pelas operações de lavra da mina a céu aberto,
+                  beneficiamento e manutenção. Lidero a integração entre
+                  mineração, usina e manutenção industrial, assegurando
+                  produtividade, disponibilidade de equipamentos, segurança e
+                  cumprimento das metas operacionais da unidade.
+                </p>
+                <ul class="tags">
+                  <li>Lavra a céu aberto</li>
+                  <li>Beneficiamento</li>
+                  <li>Manutenção</li>
+                  <li>Operações</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <article class="card">
+                <div class="card-top">
+                  <span class="company">
+                    <i class="fa-solid fa-mountain"></i>
+                    FERBASA
+                  </span>
+                  <span class="period">Nov 2025 — Jun 2026</span>
+                </div>
+                <h3>Gerente de Beneficiamento</h3>
+                <p>
+                  Liderança da área de beneficiamento de minério de cromo,
+                  garantindo fluxo produtivo, qualidade operacional e alinhamento
+                  com metas de custo, segurança e sustentabilidade da companhia.
+                </p>
+                <ul class="tags">
+                  <li>Gestão de planta</li>
+                  <li>Cromita</li>
+                  <li>Liderança</li>
+                  <li>Produção</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <article class="card">
+                <div class="card-top">
+                  <span class="company">
+                    <i class="fa-solid fa-mountain"></i>
+                    FERBASA
+                  </span>
+                  <span class="period">Jun 2022 — Atual</span>
+                </div>
+                <h3>Coordenador de Beneficiamento</h3>
+                <p>
+                  Gestão das operações de produção de lump, concentrado de
+                  cromita e areia de cromita. Coordenação de britagem,
+                  peneiramento, moagem, concentração gravimétrica, flotação e
+                  separação por sensor de raio-X. Gerenciamento de cerca de 220
+                  colaboradores, logística, cronogramas de produção e pesquisa
+                  de novas tecnologias.
+                </p>
+                <ul class="tags">
+                  <li>220+ colaboradores</li>
+                  <li>Flotação</li>
+                  <li>Sensor de raio-X</li>
+                  <li>Logística</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <article class="card">
+                <div class="card-top">
+                  <span class="company">
+                    <i class="fa-solid fa-mountain"></i>
+                    FERBASA
+                  </span>
+                  <span class="period">Mar 2013 — Atual</span>
+                </div>
+                <h3>Engenheiro de Processos II</h3>
+                <p>
+                  Atuação nas operações unitárias de britagem, peneiramento,
+                  moagem, concentração gravimétrica e separação magnética.
+                  Realização de testes em escala piloto, balanços de massa,
+                  metalúrgico e hídrico, além de projetos de recuperação de
+                  rejeitos e melhoria de processo. Planejamento e acompanhamento
+                  de OPEX e CAPEX do setor de beneficiamento.
+                </p>
+                <ul class="tags">
+                  <li>Balanço metalúrgico</li>
+                  <li>Testes piloto</li>
+                  <li>Rejeitos</li>
+                  <li>OPEX / CAPEX</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="formacao">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-index">02</span>
+            <div>
+              <p class="section-kicker">
+                <i class="fa-solid fa-graduation-cap"></i> Academia
+              </p>
+              <h2>Formação</h2>
+            </div>
+          </header>
+
+          <div class="edu-grid">
+            <article class="edu-card featured reveal">
+              <div class="edu-icon"><i class="fa-solid fa-brain"></i></div>
+              <p class="edu-place">Anhanguera</p>
+              <h3>MBA · Inteligência Artificial</h3>
+              <p class="edu-period">Em andamento</p>
+              <p>
+                Formação em inteligência artificial aplicada a estratégia,
+                processos e desenvolvimento de soluções, ampliando a capacidade
+                de liderança técnica e tomada de decisão com apoio de IA.
+              </p>
+            </article>
+
+            <article class="edu-card reveal">
+              <div class="edu-icon"><i class="fa-solid fa-user-tie"></i></div>
+              <p class="edu-place">MBA USP/Esalq</p>
+              <h3>Executive MBA · Gestão de Pessoas</h3>
+              <p class="edu-period">Liderança Organizacional</p>
+              <p>
+                Formação executiva com ênfase em liderança organizacional e
+                gestão de pessoas, complementando a atuação técnica com visão
+                estratégica de equipes e processos.
+              </p>
+            </article>
+
+            <article class="edu-card reveal">
+              <div class="edu-icon"><i class="fa-solid fa-certificate"></i></div>
+              <p class="edu-place">MF Treinamentos</p>
+              <h3>Lean Six Sigma Green Belt</h3>
+              <p class="edu-period">Nov 2022</p>
+              <p>
+                Certificação em metodologia Lean Six Sigma para melhoria de
+                processos, redução de variabilidade e otimização operacional.
+                Credencial: CLQBVSQBSD-HSJJJLHZ-XSMPHXRXHM.
+              </p>
+            </article>
+
+            <article class="edu-card reveal">
+              <div class="edu-icon"><i class="fa-solid fa-flask-vial"></i></div>
+              <p class="edu-place">UFCAT · Universidade Federal de Catalão</p>
+              <h3>Especialização em Tratamento de Minérios</h3>
+              <p class="edu-period">Pós-graduação</p>
+              <p>
+                Aprofundamento em processamento mineral, rotas de beneficiamento
+                e otimização de plantas industriais.
+              </p>
+            </article>
+
+            <article class="edu-card reveal">
+              <div class="edu-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <p class="edu-place">HG2</p>
+              <h3>Pós-Graduação · Engenharia de Segurança</h3>
+              <p class="edu-period">Formação complementar</p>
+              <p>
+                Especialização em engenharia de segurança aplicada às operações
+                industriais e de mineração.
+              </p>
+            </article>
+
+            <article class="edu-card reveal">
+              <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <p class="edu-place">UFCG · Universidade Federal de Campina Grande</p>
+              <h3>Graduação · Engenharia de Minas</h3>
+              <p class="edu-period">Bacharelado</p>
+              <p>
+                Formação em mineração e engenharia de minas, base técnica da
+                carreira em beneficiamento e processos minerais.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="idioma">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-index">03</span>
+            <div>
+              <p class="section-kicker">
+                <i class="fa-solid fa-language"></i> Comunicação
+              </p>
+              <h2>Idiomas</h2>
+            </div>
+          </header>
+
+          <div class="lang-grid">
+            <article class="lang-card reveal">
+              <div class="lang-flag" aria-hidden="true">BR</div>
+              <div class="lang-body">
+                <h3>Português</h3>
+                <p>Nativo</p>
+                <div class="meter" data-level="100">
+                  <span></span>
+                </div>
+              </div>
+              <i class="fa-solid fa-comments lang-icon"></i>
+            </article>
+
+            <article class="lang-card reveal">
+              <div class="lang-flag" aria-hidden="true">EN</div>
+              <div class="lang-body">
+                <h3>Inglês</h3>
+                <p>Profissional · leitura técnica e comunicação operacional</p>
+                <div class="meter" data-level="80">
+                  <span></span>
+                </div>
+              </div>
+              <i class="fa-solid fa-earth-americas lang-icon"></i>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="projetos">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-index">04</span>
+            <div>
+              <p class="section-kicker">
+                <i class="fa-solid fa-layer-group"></i> Portfólio
+              </p>
+              <h2>Projetos</h2>
+            </div>
+          </header>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-icon">
+                <i class="fa-solid fa-recycle"></i>
+              </div>
+              <h3>Recuperação de cromita em rejeitos</h3>
+              <p>
+                Estudo de nova rota de recuperação de cromita contida em
+                rejeitos de minério de cromo da FERBASA, com simulações
+                estatísticas e dimensionamento de planta de 75 t/h.
+              </p>
+              <a
+                class="project-link"
+                href="https://ojs.focopublicacoes.com.br/foco/article/view/2329"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver publicação <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-icon">
+                <i class="fa-solid fa-vial"></i>
+              </div>
+              <h3>Testes piloto e melhoria de rota</h3>
+              <p>
+                Condução de testes em escala piloto para melhoria de processo,
+                mudança de rota e aumento de recuperação metalúrgica no complexo
+                de beneficiamento.
+              </p>
+              <ul class="tags">
+                <li>Escala piloto</li>
+                <li>Melhoria contínua</li>
+                <li>Metalurgia</li>
+              </ul>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-icon">
+                <i class="fa-solid fa-microscope"></i>
+              </div>
+              <h3>Sensor de raio-X e flotação</h3>
+              <p>
+                Implementação e acompanhamento de separação mineral por sensor
+                de raio-X integrada às etapas de concentração gravimétrica e
+                flotação na produção de concentrados.
+              </p>
+              <ul class="tags">
+                <li>Sensor de raio-X</li>
+                <li>Flotação</li>
+                <li>Gravimetria</li>
+              </ul>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-icon">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <h3>Balanços e gestão de custos</h3>
+              <p>
+                Elaboração de balanços de massa, metalúrgico e hídrico,
+                apoiando decisões de curto e longo prazo com planejamento anual
+                e acompanhamento mensal de OPEX e CAPEX.
+              </p>
+              <ul class="tags">
+                <li>Balanço de massa</li>
+                <li>OPEX</li>
+                <li>CAPEX</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>
+          <span class="brand-text">andre-nascimento</span>
+          · Currículo digital
+        </p>
+        <div class="footer-contacts">
+          <a href="mailto:andrefigueiredo12@hotmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            andrefigueiredo12@hotmail.com
+          </a>
+          <a href="tel:+5574991196462">
+            <i class="fa-solid fa-phone"></i>
+            (74) 99119-6462
+          </a>
+          <a
+            href="https://www.linkedin.com/in/andre-nascimento"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
